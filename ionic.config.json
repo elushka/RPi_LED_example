@@ -1,0 +1,8 @@
+{
+  "name": "redLed",
+  "app_id": "4aea672e",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
