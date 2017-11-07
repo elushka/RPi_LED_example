@@ -58,9 +58,9 @@ var HomePage = (function () {
         this.navCtrl = navCtrl;
         this.toastCtrl = toastCtrl;
     }
-    HomePage.prototype.showToast = function (position) {
+    HomePage.prototype.ShelfUnlock = function (position) {
         var toast = this.toastCtrl.create({
-            message: 'Mmmm, buttered toast',
+            message: 'Unlocked!',
             duration: 2000,
             position: position
         });
@@ -85,11 +85,12 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      RPi LED Controllers\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  Click the button to turn on the LED.\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> \n    will be your guide.\n  </p>\n  <button ion-button block (click)="showToast(\'middle\')">\n    Turn ON LED</button>\n</ion-content>\n'/*ion-inline-end:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Wardj\Documents\GitHub\RPi_LED_example\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Smartmory Test Demo\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  Click the button to unlock get a laptop!\n\n\n\n  <button ion-button block (click)="ShelfUnlock(\'middle\')">\n\n    Unlock</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Wardj\Documents\GitHub\RPi_LED_example\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ToastController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ToastController */]) === "function" && _b || Object])
 ], HomePage);
 
+var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -204,7 +205,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\Wardj\Documents\GitHub\RPi_LED_example\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Wardj\Documents\GitHub\RPi_LED_example\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);

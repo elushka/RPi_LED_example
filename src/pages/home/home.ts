@@ -12,9 +12,9 @@ export class HomePage {
 
   }
 
-  showToast(position: string) {
+  ShelfUnlock(position: string) {
     let toast = this.toastCtrl.create({
-      message: 'Mmmm, buttered toast',
+      message: 'Unlocked!',
       duration: 2000,
       position: position
     });
