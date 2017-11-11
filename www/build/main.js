@@ -95,7 +95,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Smartmory Test Demo\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  Click the button to unlock get a laptop!\n\n  <button ion-button block (click)="ShelfUnlock(\'middle\'); loadPeople()">\n    Unlock</button>\n</ion-content>\n'/*ion-inline-end:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/pages/home/home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Smartmory Test Demo\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  Click the button to unlock and get a laptop!\n\n  <button ion-button block (click)="ShelfUnlock(\'middle\'); loadPeople()">\n    Unlock</button>\n</ion-content>\n'/*ion-inline-end:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/pages/home/home.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__providers_people_service_people_service__["a" /* PeopleServiceProvider */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ToastController */],
@@ -150,7 +150,7 @@ var PeopleServiceProvider = (function () {
             // We're using Angular HTTP provider to request the data,
             // then on the response, it'll map the JSON data to a parsed JS object.
             // Next, we process the data and resolve the promise with the new data.
-            _this.http.get('https://smartmory-pi.onlosant.com/gpio/4.json')
+            _this.http.get('https://smartmory-pi.onlosant.com/gpio/17')
                 .map(function (res) { return res.json(); })
                 .subscribe(function (data) {
                 // we've got back the raw data, now generate the core schedule data
