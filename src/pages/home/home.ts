@@ -28,7 +28,6 @@ export class HomePage {
   }
 
   loadPeople(i){
-    console.log(i);
     this.peopleService.load(i)
     .then(data => {
       this.people = data;

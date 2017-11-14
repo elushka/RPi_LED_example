@@ -108,7 +108,11 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+<<<<<<< HEAD
         selector: 'page-home',template:/*ion-inline-start:"S:\Documents\SDP\RPi_LED_example\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Smartmory Test Demo\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  To get started, select one of the available laptops.\n\n  <br>\n\n  <br>\n\n  To return a laptop, tap on an "Empty Compartment".\n\n  <ion-list no-lines>\n\n      <ion-item *ngFor="let laptop of compartments; let i = index">\n\n      <button ion-button default item-center (click)="ShelfUnlock(\'middle\'); loadPeople(i+1)">{{laptop}}</button>\n\n      </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"S:\Documents\SDP\RPi_LED_example\src\pages\home\home.html"*/,
+=======
+        selector: 'page-home',template:/*ion-inline-start:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Smartmory Test Demo\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  Click the button to unlock and get a laptop!\n\n  <button ion-button block (click)="ShelfUnlock(\'middle\'); loadPeople()">\n    Unlock</button>\n</ion-content>\n'/*ion-inline-end:"/Users/erostin/Desktop/Smartmory/RPi_LED_example/src/pages/home/home.html"*/,
+>>>>>>> d1f38cb162929970148a7dfae0c05d2f9394d9c2
         providers: [__WEBPACK_IMPORTED_MODULE_2__providers_people_service_people_service__["a" /* PeopleServiceProvider */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ToastController */],
@@ -153,7 +157,14 @@ var PeopleServiceProvider = (function () {
         }
         var pinNumber = i;
         return new Promise(function (resolve) {
+<<<<<<< HEAD
             _this.http.get('https://smartmory-pi.onlosant.com/gpio/' + pinNumber)
+=======
+            // We're using Angular HTTP provider to request the data,
+            // then on the response, it'll map the JSON data to a parsed JS object.
+            // Next, we process the data and resolve the promise with the new data.
+            _this.http.get('https://smartmory-pi.onlosant.com/gpio/17')
+>>>>>>> d1f38cb162929970148a7dfae0c05d2f9394d9c2
                 .map(function (res) { return res.json(); })
                 .subscribe(function (data) {
                 _this.data = data;
