@@ -10,13 +10,26 @@ import { PeopleServiceProvider } from '../../providers/people-service/people-ser
 })
 export class HomePage {
   public people: any;
+  public compartments: any;
   constructor(public navCtrl: NavController, public toastCtrl: ToastController,
               public peopleService: PeopleServiceProvider) {
-
+                this.compartments = [
+                  "MacBook Pro 15",
+                  "MacBook Air 13",
+                  "Lenovo ThinkPad",
+                  "MacBook Pro 13",
+                  "MacBook Pro 15",
+                  "Lenovo ThinkPad",
+                  "MacBook Air 11",
+                  "Empty Compartment",
+                  "MacBook Pro 13",
+                  "MacBook Pro 15",
+                ];
   }
 
-  loadPeople(){
-    this.peopleService.load()
+  loadPeople(i){
+    console.log(i);
+    this.peopleService.load(i)
     .then(data => {
       this.people = data;
     });
@@ -34,7 +47,7 @@ export class HomePage {
 
   showToastWithCloseButton() {
     const toast = this.toastCtrl.create({
-      message: 'Your files were successfully saved',
+      message: 'Laptop returned successfully!',
       showCloseButton: true,
       closeButtonText: 'Ok'
     });
@@ -43,7 +56,7 @@ export class HomePage {
 
   showLongToast() {
     let toast = this.toastCtrl.create({
-      message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptatibus quibusdam eum nihil optio, ullam accusamus magni, nobis suscipit reprehenderit, sequi quam amet impedit. Accusamus dolorem voluptates laborum dolor obcaecati.',
+      message: 'Please return the correct device.',
       duration: 2000,
     });
     toast.present();

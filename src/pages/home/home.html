@@ -7,8 +7,13 @@
 </ion-header>
 
 <ion-content padding>
-  Click the button to unlock get a laptop!
-
-  <button ion-button block (click)="ShelfUnlock('middle'); loadPeople()">
-    Unlock</button>
+  To get started, select one of the available laptops.
+  <br>
+  <br>
+  To return a laptop, tap on an "Empty Compartment".
+  <ion-list no-lines>
+      <ion-item *ngFor="let laptop of compartments; let i = index">
+      <button ion-button default item-center (click)="ShelfUnlock('middle'); loadPeople(i+1)">{{laptop}}</button>
+      </ion-item>
+  </ion-list>
 </ion-content>
