@@ -51,14 +51,6 @@ export class HomePage {
     });
   }
 
-  // nfcState(){
-  //   this.peopleService.nfcStatus()
-  //   .then(data => {
-  //     this.people = data;
-  //   });
-  //   return $nfcStatus;
-  // }
-
   ShelfUnlock(position: string) {
     let toast = this.toastCtrl.create({
       message: 'Unlocked!',

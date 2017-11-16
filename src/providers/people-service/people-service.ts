@@ -27,15 +27,4 @@ export class PeopleServiceProvider {
     });
   }
 
-  // nfcStatus() {
-  //   return new Promise(resolve => {
-  //     this.http.get('https://smartmory-pi.onlosant.com/nfcResponse')
-  //       .map(res => res.json())
-  //       .subscribe(data => {
-  //         this.data = data;
-  //         resolve(this.data);
-  //       });
-  //   });
-  // }
-
 }
