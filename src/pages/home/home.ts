@@ -27,23 +27,6 @@ export class HomePage {
                 ];
   }
 
-  loadPeople(i){
-    this.peopleService.load(i)
-    .then(data => {
-      this.people = data;
-    });
-  }
-
-  ShelfUnlock(position: string) {
-    let toast = this.toastCtrl.create({
-      message: 'Unlocked!',
-      duration: 2000,
-      position: position
-    });
-
-    toast.present(toast);
-  }
-
   showToastWithCloseButton() {
     const toast = this.toastCtrl.create({
       message: 'Laptop returned successfully!',
@@ -59,6 +42,30 @@ export class HomePage {
       duration: 2000,
     });
     toast.present();
+  }
+
+  actLock(i){
+    this.peopleService.load(i)
+    .then(data => {
+      this.people = data;
+    });
+  }
+
+  // nfcState(){
+  //   this.peopleService.nfcStatus()
+  //   .then(data => {
+  //     this.people = data;
+  //   });
+  //   return $nfcStatus;
+  // }
+
+  ShelfUnlock(position: string) {
+    let toast = this.toastCtrl.create({
+      message: 'Unlocked!',
+      duration: 2000,
+      position: position
+    });
+    toast.present(toast);
   }
 
 }

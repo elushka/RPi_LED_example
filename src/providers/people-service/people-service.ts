@@ -14,7 +14,9 @@ export class PeopleServiceProvider {
     if (this.data) {
       return Promise.resolve(this.data);
     }
-    var pinNumber = i;
+    var pinNumber;
+    pinNumber = i;
+
     return new Promise(resolve => {
       this.http.get('https://smartmory-pi.onlosant.com/gpio/'+pinNumber)
         .map(res => res.json())
@@ -24,5 +26,16 @@ export class PeopleServiceProvider {
         });
     });
   }
+
+  // nfcStatus() {
+  //   return new Promise(resolve => {
+  //     this.http.get('https://smartmory-pi.onlosant.com/nfcResponse')
+  //       .map(res => res.json())
+  //       .subscribe(data => {
+  //         this.data = data;
+  //         resolve(this.data);
+  //       });
+  //   });
+  // }
 
 }
