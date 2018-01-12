@@ -95,13 +95,6 @@ var HomePage = (function () {
             _this.people = data;
         });
     };
-    // nfcState(){
-    //   this.peopleService.nfcStatus()
-    //   .then(data => {
-    //     this.people = data;
-    //   });
-    //   return $nfcStatus;
-    // }
     HomePage.prototype.ShelfUnlock = function (position) {
         var toast = this.toastCtrl.create({
             message: 'Unlocked!',
@@ -114,7 +107,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"S:\Documents\SDP\RPi_LED_example\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Smartmory Test Demo\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  To get started, select one of the available laptops.\n\n  <br>\n\n  <br>\n\n  To return a laptop, tap on an "Empty Compartment".\n\n  <ion-list no-lines>\n\n      <ion-item *ngFor="let laptop of compartments; let i = index">\n\n      <button ion-button default item-center (click)="ShelfUnlock(\'middle\'); actLock(i+2);">{{laptop}}</button>\n\n      </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"S:\Documents\SDP\RPi_LED_example\src\pages\home\home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/Users/Jadedh/Desktop/Project/Smartmory_App/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Smartmory Test Demo\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  To get started, select one of the available laptops.\n  <br>\n  <br>\n  To return a laptop, tap on an "Empty Compartment".\n  <ion-list no-lines>\n      <ion-item *ngFor="let laptop of compartments; let i = index">\n      <button ion-button default item-center (click)="ShelfUnlock(\'middle\'); actLock(i+2);">{{laptop}}</button>\n      </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/Jadedh/Desktop/Project/Smartmory_App/src/pages/home/home.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__providers_people_service_people_service__["a" /* PeopleServiceProvider */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ToastController */],
@@ -172,10 +165,9 @@ var PeopleServiceProvider = (function () {
 }());
 PeopleServiceProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
 ], PeopleServiceProvider);
 
-var _a;
 //# sourceMappingURL=people-service.js.map
 
 /***/ }),
@@ -296,7 +288,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"S:\Documents\SDP\RPi_LED_example\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"S:\Documents\SDP\RPi_LED_example\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/Jadedh/Desktop/Project/Smartmory_App/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/Jadedh/Desktop/Project/Smartmory_App/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
